@@ -1,0 +1,74 @@
+super + r
+    urxvt
+super + v
+    dmenu_run -nb '#000000' -sb '#203142'
+Print
+    scrot
+
+super + shift + F10
+    bspc quit
+super + c
+    bspc node -c
+super + shift + c
+    bspc node -k
+super + t
+    bspc desktop -l next
+super + Return
+    bspc node -s biggest
+super + space
+    bspc node -t floating
+super + shift + space
+    bspc node -t tiled
+
+
+
+super + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+super + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
+
+super + {q,w,e,a,s,d}
+	bspc desktop -f {Q,W,E,A,S,D}
+super + shift + {q,w,e,a,s,d}
+	bspc node -d {Q,W,E,A,S,D}
+    
+super + h
+	bspc node @east -r -50; bspc node @west -r -50 
+super + l
+	bspc node @east -r +50; bspc node @west -r +50 
+super + shift + h
+	bspc node @north -r -50; bspc node @south -r -50 
+super + shift + l
+	bspc node @north -r +50; bspc node @south -r +50 
+
+super + j
+	bspc node -f prev 
+super + k
+	bspc node -f next 
+super + shift + j
+	bspc node @/ -F horizontal
+super + shift + k
+	bspc node @/ -F vertical
+
+super + g
+	bspc node @/ -E
+super + shift + g
+	bspc node @/ -B
+
+~button1
+	bspc pointer -g focus
+super + button{1-3}
+	; bspc pointer -g {move,resize_side,resize_corner}
+super + button{1-3}
+    bspc pointer -t %i %i
+super + @button{1-3}
+	bspc pointer -u
+
+
+
+
+
+
+
+
+
